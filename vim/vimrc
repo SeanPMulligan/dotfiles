@@ -1,0 +1,54 @@
+colorscheme gruvbox
+" Remap leader key to ' '
+let g:mapleader=' '
+set number relativenumber
+set nocompatible
+syntax enable
+filetype plugin on
+set tabstop=2
+set shiftwidth=2
+set scrolloff=4
+set cursorline
+set ruler
+set expandtab
+set number
+set incsearch
+set showmatch
+
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" Quicker window resizing
+nnoremap <Left> :vertical resize -10<CR>
+nnoremap <Right> :vertical resize +10<CR>
+nnoremap <Up> :resize +5<CR>
+nnoremap <Down> :resize -5<CR>
+
+" Remap Esc to jj
+:imap jj <Esc>
+" Remap save
+noremap <Leader>s :update<CR>
+" Remap quit
+noremap <Leader>q :quit<CR>
+" Remap :newtab
+noremap <Leader>o :tabnew<CR>
+
+" Remap :w !pbcopy (copy to clipboard)
+noremap <Leader>cc :w !pbcopy<CR>
+" Remap NERDTreeToggle
+nmap <silent> <Leader>d :NERDTreeToggle<CR>
+" Remap NERDTreeFind
+nmap <silent> <Leader>a :NERDTreeFind<CR>
+" Show hidden file in NERDTree
+let NERDTreeShowHidden=1
+
+" Remap fzf :Files
+noremap <Leader>f :Files<CR>
+set rtp+=/usr/local/opt/fzf
+
+" ALE Linting
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'

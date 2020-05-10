@@ -1,0 +1,9 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'preservim/nerdtree'
+Plug 'dense-analysis/ale'
+Plug 'junegunn/fzf.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-commentary'
+
+call plug#end()
